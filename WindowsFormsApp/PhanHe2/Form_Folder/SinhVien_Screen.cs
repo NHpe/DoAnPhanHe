@@ -67,8 +67,8 @@ namespace WindowsFormsApp
             }
             else
             {
-                //groupBox1.Hide();
-                //button_DANGKY_SV.Hide();    
+                groupBox1.Hide();
+                button_DANGKY_SV.Hide();    
             }
 
             LoadData();
