@@ -20,7 +20,7 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             server = connectServer;
-            tables = new string[]{ "DAPH_DANGKY", "DAPH_KHMO", "DAPH_PHANCONG" };
+            tables = new string[]{ "DAPH_DANGKY", "DAPH_KHMO", "DAPH_PHANCONG, DAPH_SINHVIEN" };
 
             cbbStandard.DataSource = tables;
         }
