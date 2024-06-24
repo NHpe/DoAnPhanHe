@@ -104,7 +104,7 @@ namespace WindowsFormsApp
                         }
                         else
                         {
-                            string sql = $"BEGIN GAN_QUYEN_CHO_SINH_VIEN('{selectedUser}'); END; ";
+                            string sql = $"BEGIN GAN_QUYEN_SINH_VIEN('{selectedUser}'); END; ";
                             using (OracleCommand command = new OracleCommand(sql, connection))
                             {
                                 // Thực thi câu lệnh SQL
