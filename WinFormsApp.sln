@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{6ECB053B-67DD-4862-9174-07CA8B4F5327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Debug|x86.ActiveCfg = Debug|x86
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Debug|x86.Build.0 = Debug|x86
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Release|x86.ActiveCfg = Release|x86
+		{6ECB053B-67DD-4862-9174-07CA8B4F5327}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7A1A612-EEA0-417C-8008-7A8C0BECF696}
+	EndGlobalSection
+EndGlobal

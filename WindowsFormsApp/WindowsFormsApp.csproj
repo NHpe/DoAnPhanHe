@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6ECB053B-67DD-4862-9174-07CA8B4F5327}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp</RootNamespace>
+    <AssemblyName>WindowsFormsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.23.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.23.4.0\lib\net472\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.8.0.0\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Class_Folder\all_tab_cols_Database.cs" />
+    <Compile Include="PhanHe1\Class_Folder\ConnectServer.cs" />
+    <Compile Include="PhanHe1\Class_Folder\dba_roles_Database.cs" />
+    <Compile Include="PhanHe1\Class_Folder\dba_role_privs_database.cs" />
+    <Compile Include="PhanHe1\Class_Folder\dba_tables_Database.cs" />
+    <Compile Include="PhanHe1\Class_Folder\dba_tab_privs_database.cs" />
+    <Compile Include="PhanHe1\Class_Folder\dba_users_Database.cs" />
+    <Compile Include="PhanHe1\Form_Folder\CapQuyenChoNguoiDungVaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\CapQuyenChoNguoiDungVaiTro.Designer.cs">
+      <DependentUpon>CapQuyenChoNguoiDungVaiTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\CapVaiTroChoNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\CapVaiTroChoNguoiDung.Designer.cs">
+      <DependentUpon>CapVaiTroChoNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\PhanHe1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\PhanHe1.Designer.cs">
+      <DependentUpon>PhanHe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\SuaNguoiDungVaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\SuaNguoiDungVaiTro.Designer.cs">
+      <DependentUpon>SuaNguoiDungVaiTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\ThemNguoiDungVaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\ThemNguoiDungVaiTro.Designer.cs">
+      <DependentUpon>ThemNguoiDungVaiTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\ThuHoiQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\ThuHoiQuyen.Designer.cs">
+      <DependentUpon>ThuHoiQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\XemThongTinQuyenUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\XemThongTinQuyenUser.Designer.cs">
+      <DependentUpon>XemThongTinQuyenUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\XemThongTinRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\XemThongTinRole.Designer.cs">
+      <DependentUpon>XemThongTinRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\XoaNguoiDungVaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe1\Form_Folder\XoaNguoiDungVaiTro.Designer.cs">
+      <DependentUpon>XoaNguoiDungVaiTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Chon_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Chon_Form.Designer.cs">
+      <DependentUpon>Chon_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Trưởng khoa\ThongTinNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Trưởng khoa\ThongTinNhanSu.Designer.cs">
+      <DependentUpon>ThongTinNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\NhanSu_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\NhanSu_Screen.Designer.cs">
+      <DependentUpon>NhanSu_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinNhanVien.Designer.cs">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinSinhVien.Designer.cs">
+      <DependentUpon>ThongTinSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinDonVi.Designer.cs">
+      <DependentUpon>ThongTinDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinHocPhan.Designer.cs">
+      <DependentUpon>ThongTinHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinKeHoachMo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinKeHoachMo.Designer.cs">
+      <DependentUpon>ThongTinKeHoachMo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giảng viên\ThongTinGiangDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giảng viên\ThongTinGiangDay.Designer.cs">
+      <DependentUpon>ThongTinGiangDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giảng viên\ThongTinDangKyGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giảng viên\ThongTinDangKyGiangVien.Designer.cs">
+      <DependentUpon>ThongTinDangKyGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giáo vụ\ThongTinPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giáo vụ\ThongTinPhanCong.Designer.cs">
+      <DependentUpon>ThongTinPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giáo vụ\QuanLyDangKyHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Giáo vụ\QuanLyDangKyHocPhan.Designer.cs">
+      <DependentUpon>QuanLyDangKyHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Trưởng đơn vị\PhanCongTruongDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Trưởng đơn vị\PhanCongTruongDonVi.Designer.cs">
+      <DependentUpon>PhanCongTruongDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\SinhVien_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\SinhVien_Screen.Designer.cs">
+      <DependentUpon>SinhVien_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_OLS\ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_OLS\ThongBao.Designer.cs">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Audit\Audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Audit\Audit.Designer.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Backup Restore\backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\Form_Backup Restore\backup.Designer.cs">
+      <DependentUpon>backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\PhanHe2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanHe2\Form_Folder\PhanHe2.Designer.cs">
+      <DependentUpon>PhanHe2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe1\Form_Folder\CapQuyenChoNguoiDungVaiTro.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\CapVaiTroChoNguoiDung.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\PhanHe1.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\SuaNguoiDungVaiTro.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\ThemNguoiDungVaiTro.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\ThuHoiQuyen.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\XemThongTinQuyenUser.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\XemThongTinRole.resx" />
+    <EmbeddedResource Include="PhanHe1\Form_Folder\XoaNguoiDungVaiTro.resx" />
+    <EmbeddedResource Include="PhanHe2\Chon_Form.resx">
+      <DependentUpon>Chon_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Backup Restore\backup.resx">
+      <DependentUpon>backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Giáo vụ\QuanLyDangKyHocPhan.resx">
+      <DependentUpon>QuanLyDangKyHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Giáo vụ\ThongTinPhanCong.resx">
+      <DependentUpon>ThongTinPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Giảng viên\ThongTinDangKyGiangVien.resx">
+      <DependentUpon>ThongTinDangKyGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Giảng viên\ThongTinGiangDay.resx">
+      <DependentUpon>ThongTinGiangDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinDonVi.resx">
+      <DependentUpon>ThongTinDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinHocPhan.resx">
+      <DependentUpon>ThongTinHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinKeHoachMo.resx">
+      <DependentUpon>ThongTinKeHoachMo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinNhanVien.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Nhân viên cơ bản\ThongTinSinhVien.resx">
+      <DependentUpon>ThongTinSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Trưởng khoa\ThongTinNhanSu.resx">
+      <DependentUpon>ThongTinNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\Form_Trưởng đơn vị\PhanCongTruongDonVi.resx">
+      <DependentUpon>PhanCongTruongDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\NhanSu_Screen.resx">
+      <DependentUpon>NhanSu_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\PhanHe2.resx">
+      <DependentUpon>PhanHe2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhanHe2\Form_Folder\SinhVien_Screen.resx">
+      <DependentUpon>SinhVien_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PhanHe2\Class_Folder\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
