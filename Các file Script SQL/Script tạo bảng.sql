@@ -93,8 +93,8 @@ CREATE TABLE DAPH_THONGBAO(
     NOIDUNG varchar2(255),
     NGAY Date,
     CHUCVU number, -- 6: Truong khoa, 5: Truong don vi, 4: Giang vien, 3: Giao vu:, 2: Nhan vien, 1: Sinh vien (Co phan biet thu tu)
-    NGANH number -- 0: Khong thuoc linh vuc 1: HTTT, 2: CNPM, 3: KHMT, 4: CNTT, 5: TGMT, 6: MMT, 7: Tat ca linh vuc
-    COSO number, -- 1: Co so 1, 2: Co so 2
+    NGANH number, -- 0: Khong thuoc linh vuc 1: HTTT, 2: CNPM, 3: KHMT, 4: CNTT, 5: TGMT, 6: MMT, 7: Tat ca linh vuc
+    COSO number -- 1: Co so 1, 2: Co so 2
 );
 
 
